@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Arial-Italic';
-    src: url('/assets/fonts/Arial-Italic.ttf') format('truetype');
+    src: url('./assets/fonts/Arial-Italic.ttf') format('truetype');
 }
 
 @font-face {
