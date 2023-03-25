@@ -18,6 +18,10 @@
     src: url('/assets/fonts/Georgia-Bold.ttf') format('truetype');
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .body {
     max-width: 1280px;
     width: 100%;
@@ -31,12 +35,7 @@
 }
 
 .btn {
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 130%;
-    /* identical to box height, or 22px */
-    letter-spacing: 0.06em;
+    cursor: pointer;
 
 }
 
@@ -44,7 +43,22 @@
     background: #F1CDB3;
     border: 1px solid #F1CDB3;
     border-radius: 25px;
-    padding: 16px 56px;
+    padding: 14px 43px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+    transition: 0.2s;
+}
+
+.btn-main:hover {
+    background: #FDDCC4;
+    color: #000000;
+    transition: 0.2s;
+    transform:scale(1.1)
 }
 
 .btn-pets {
@@ -60,6 +74,15 @@
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #292929;
+    transition: 0.2s;
+}
+
+.btn-pets:hover {
+    transition: 0.2s;
+    background: #FDDCC4;
+    color: #000000;
+    transition: 0.2s;
+    transform:scale(1.1)
 }
 
 .btn-card {
@@ -76,6 +99,15 @@
     letter-spacing: 0.06em;
     color: #292929;
     margin-bottom: 30px;
+    transition: 0.2s;
+}
+
+.btn-card:hover {
+    transition: 0.2s;
+    background: #FDDCC4;
+    color: #000000;
+    transition: 0.2s;
+    transform:scale(1.1)
 }
 
 .btn-slider_control {
@@ -84,7 +116,15 @@
     border-radius: 50%;
     padding: 17px 18px;
     background-color: #FAFAFA;
-    /* margin-bottom: -2px; */
+    transition: 0.2s;
+}
+
+.btn-slider_control:hover {
+    transition: 0.2s;
+    background: #FDDCC4;
+    color: #000000;
+    transition: 0.2s;
+    transform:scale(1.1)
 }
 
 /*Header*/
@@ -108,6 +148,14 @@
 .header-logo {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.header-logo:hover {
+    transition: 0.2s;
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .logo-title {
@@ -155,9 +203,11 @@
 
 }
 
-.active {
+.nav-link.active {
     border-bottom: 2px solid#F1CDB3;
     color: #F1CDB3;
+    cursor: default;
+    transition: 0.2s;
 }
 
 .nav-link {
@@ -169,14 +219,22 @@
     line-height: 160%;
     color: #CDCDCD;
     padding-bottom: 5px;
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    color: #F1CDB3;
+    transition: 0.2s;
 }
 
 .nav-link:active {
-    text-decoration: underline;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
 .nav-link:visited {
     text-decoration: none;
+    transition: 0.2s;
 }
 
 .burger {
@@ -363,6 +421,13 @@
     align-items: center;
     background: #FAFAFA;
     border-radius: 10px;
+    transition: 0.2s;
+}
+
+.slider-card:hover {
+    transition: 0.2s;
+    transform: scale(1.05);
+    box-shadow: 0px 2px 3px 3px rgb(125, 124, 124);
 }
 
 .card-img {
@@ -389,7 +454,7 @@
 .help {
     width: 100%;
     max-width: 1280px;
-    padding: 53px 0px 0px 0px;
+    padding: 53px 0px 100px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -417,7 +482,7 @@
     align-items: center;
     justify-content: center;
     /* gap: 120px; */
-    row-gap: 70px;
+    row-gap: 55px;
     column-gap: 120px;
 }
 
@@ -447,7 +512,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 115%;
-
+    margin: 30px 0px 0px 0px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -465,6 +530,7 @@
     justify-content: center;
     width: 100%;
     max-width: 1280px;
+    padding: 64px 0px 87px 0px;
 }
 
 .donation-wrapper {
@@ -472,17 +538,21 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 30px;
 }
 
 .donation-img {
     height: 100%;
     max-height: 261px;
+    margin-left: -19px;
+    /* margin-right: 19px; */
 }
 
 .donation-block {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    max-width: 360px;
 }
 
 .block-title {
@@ -494,7 +564,10 @@
     display: flex;
     align-items: center;
     letter-spacing: 0.06em;
-    color: #545454;    
+    color: #545454; 
+    max-width: 295px;
+    margin-bottom: 4px;
+    margin-top: 17px;  
 }
 
 .block-text {
@@ -517,14 +590,23 @@
     line-height: 18px;
     display: flex;
     align-items: center;
-    color: #B2B2B2;    
+    color: #B2B2B2; 
+    margin-top: 20px;   
 }
 
 .donation-card {
     display: flex;
-    padding: 0px 10px;
-    border-radius: 15px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 12px;
     background-color: #F1CDB3;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.donation-card:hover {
+    transition: 0.2s;
+    background-color: #f88e42b9;
 }
 
 .card-numbers {
@@ -533,7 +615,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 115%;
-    /* identical to box height, or 23px */
+    margin: 0px 0px 0px 16px;
     color: #545454;
     display: flex;
     align-items: center;
@@ -543,15 +625,20 @@
 /*footer section*/
 
 .footer {
-    background-image: url('/shelter/assets/img/footer-bg.png');
+    background-image: url(/shelter/assets/img/footer-bg.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 41px 0px 0px 0px;
 }
 
 .footer-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    gap: 160px;
 }
 
 .footer-title {
@@ -561,7 +648,7 @@
     font-size: 35px;
     line-height: 130%;
     letter-spacing: 0.06em;
-
+    margin-top: 17px;
     color: #FFFFFF;
 }
 
@@ -571,7 +658,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 115%;
-
+    margin: 15px 0px 10px 20px;
     letter-spacing: 0.06em;
     color: #F1CDB3;
 }
@@ -579,14 +666,40 @@
 .footer-block_item {
     display: flex;
     flex-direction: row;
+    margin-bottom: 24px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.footer-block_item:hover {
+    transition: 0.2s;
+    cursor: pointer;
+    margin-left: 5px;
 }
 
 .footer-block_wrapper {
     display: flex;
     flex-direction: row;
+    gap: 140px;
 }
 
 .footer-info_block {
     width: 100%;
     max-width: 300px;
+}
+
+/*footer correction*/
+
+.fix-one {
+    margin-bottom: 19px;
+}
+
+.fix-two {
+    margin-left: -2px;
+    margin-top: -2px;
+    margin-bottom: 13px;
+}
+
+.fix-three {
+    margin-left: -2px;
 }
