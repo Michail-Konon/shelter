@@ -12,7 +12,7 @@
 <body class="body">
     <header class="header">
         <div class="header-wrapper">
-            <div class="header-logo" onclick="location.href='';">
+            <div class="header-logo" onclick="location.href='/shelter/index.html';">
                 <p class="logo-title">Cozy House</p>
                 <p class="logo-text">Shelter for pets in Boston</p>
             </div>
@@ -26,7 +26,7 @@
                         <a class="nav-link active">Our pets</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#help">Help the shelter</a>
+                        <a class="nav-link" href="/shelter/index.html#help">Help the shelter</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#footer">Contacts</a>
@@ -41,11 +41,10 @@
     <main class="section-wrapper">
         <section id="pets" class="pets">
             <div class="pets-wrapper">
-                <h2 class="pets-title">
+                <h1 class="pets-title">
                     Our friends who<br>are looking for a house
-                </h2>
+                </h1>
                 <div class="pets-slider">
-                    <button class="btn-slider_control btn">←</button>
                     <div class="slider-main_block">
                         <div class="slider-card">
                             <img class="card-img" src="/shelter/assets/img/card-katrine.png" alt="cat">
@@ -64,10 +63,45 @@
                             <p class="card-title">Woody</p>
                             <button class="btn-card btn">Learn more</button>
                         </div>
+
+                        <div class="slider-card">
+                            <img class="card-img" src="/shelter/assets/img/card-sophia.png" alt="puppy">
+                            <p class="card-title">Sophia</p>
+                            <button class="btn-card btn">Learn more</button>
+                        </div>
+
+                        <div class="slider-card">
+                            <img class="card-img" src="/shelter/assets/img/card-timmy.png" alt="doggy">
+                            <p class="card-title">Timmy</p>
+                            <button class="btn-card btn">Learn more</button>
+                        </div>
+
+                        <div class="slider-card">
+                            <img class="card-img" src="/shelter/assets/img/card-charly.png" alt="dog">
+                            <p class="card-title">Charly</p>
+                            <button class="btn-card btn">Learn more</button>
+                        </div>
+
+                        <div class="slider-card">
+                            <img class="card-img" src="/shelter/assets/img/card-scarlet.png" alt="dog">
+                            <p class="card-title">Scarlett</p>
+                            <button class="btn-card btn">Learn more</button>
+                        </div>
+
+                        <div class="slider-card">
+                            <img class="card-img" src="/shelter/assets/img/card-freddie.png" alt="dog">
+                            <p class="card-title">Freddie</p>
+                            <button class="btn-card btn">Learn more</button>
+                        </div>
                     </div>
-                    <button class="btn-slider_control btn">→</button>
                 </div>
-                <button class="btn-pets btn">Get to know the rest</button>
+                <div class="slider_controls">
+                    <button class="btn-slider_control-long disable"> &lt;&lt; </button>
+                    <button class="btn-slider_control disable">&lt;</button>
+                    <div class="control-counter">1</div>
+                    <button class="btn-slider_control">></button>
+                    <button class="btn-slider_control-long">>></button>
+                </div>
             </div>
         </section>
     </main>

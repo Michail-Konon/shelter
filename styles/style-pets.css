@@ -39,30 +39,6 @@ html {
 
 }
 
-.btn-pets {
-    background: #F1CDB3;
-    border: 1px solid #F1CDB3;
-    border-radius: 25px;
-    padding: 14px 44px;
-    margin: 50px 48px 48px 49px;
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 130%;
-    letter-spacing: 0.06em;
-    color: #292929;
-    transition: 0.2s;
-}
-
-.btn-pets:hover {
-    transition: 0.2s;
-    background: #FDDCC4;
-    color: #000000;
-    transition: 0.2s;
-    transform:scale(1.1)
-}
-
 .btn-card {
     border: 2px solid #F1CDB3;
     border-radius: 25px;
@@ -92,12 +68,62 @@ html {
     margin-top: 1px;
     border: 2px solid #F1CDB3;
     border-radius: 50%;
+    padding: 17px 21px;
+    background-color: #FAFAFA;
+    transition: 0.2s;
+}
+
+.btn-slider_control.disable {
+    margin-top: 1px;
+    border: 2px solid #CDCDCD;
+    color: #CDCDCD;
+    border-radius: 50%;
+    padding: 17px 21px;
+    background-color: rgb(125, 124, 124, 0);
+    transition: 0.2s;
+}
+
+.btn-slider_control.disable:hover {
+    transition: 0.2s;
+    background: rgb(125, 124, 124, 0);
+    color: #CDCDCD;
+    transform:scale(1.0)
+}
+
+.btn-slider_control:hover {
+    background: #FDDCC4;
+    color: #000000;
+    transition: 0.2s;
+    transform:scale(1.1)
+}
+
+.btn-slider_control-long {
+    margin-top: 1px;
+    border: 2px solid #F1CDB3;
+    border-radius: 50%;
     padding: 17px 18px;
     background-color: #FAFAFA;
     transition: 0.2s;
 }
 
-.btn-slider_control:hover {
+.btn-slider_control-long.disable {
+    margin-top: 1px;
+    border: 2px solid #CDCDCD;
+    color: #CDCDCD;
+    border-radius: 50%;
+    padding: 17px 18px;
+    background-color: rgb(125, 124, 124, 0);
+    transition: 0.2s;
+}
+
+.btn-slider_control-long.disable:hover {
+    transition: 0.2s;
+    background: rgb(125, 124, 124, 0);
+    color: #CDCDCD;
+    transform:scale(1.0)
+}
+
+.btn-slider_control-long:hover {
     transition: 0.2s;
     background: #FDDCC4;
     color: #000000;
@@ -105,12 +131,13 @@ html {
     transform:scale(1.1)
 }
 
+
 /*header section*/
 
 .header {
     width: 100%;
     max-width: 1200px;
-    margin: 15px auto;
+    margin: 31px auto 25px auto;
 }
 
 .header-wrapper {
@@ -120,7 +147,7 @@ html {
     width: 100%;
     max-width: 1200px;
     align-items: center;
-    margin: 16px auto;
+    margin: 0px;
 }
 
 .header-logo {
@@ -165,7 +192,7 @@ html {
 }
 
 .navigation {
-    margin: 0px 2px 10px 2px;
+    margin: 0px 2px 10px 0px;
 }
 
 .nav-list {
@@ -173,7 +200,7 @@ html {
     flex-direction: row;
     list-style: none;
     margin: 0px;
-    gap: 35px;
+    gap: 34px;
     padding: 0px;
 }
 
@@ -260,7 +287,7 @@ html {
     display: flex;
     width: 100%;
     max-width: 1200px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -269,7 +296,25 @@ html {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 90px;
+    row-gap: 29px;
+    column-gap: 40px;
+}
+
+.slider_controls {
+    margin: 49px 30px 48px 30px;
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-counter {
+    margin-top: 0px;
+    border: 2px solid #F1CDB3;
+    border-radius: 50%;
+    padding: 16px 21px;
+    background-color: #F1CDB3;
+    transition: 0.2s;
 }
 
 /*slider cards*/
@@ -316,7 +361,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 41px 0px 0px 0px;
+    padding: 40px 0px 0px 0px;
 }
 
 .footer-wrapper {
