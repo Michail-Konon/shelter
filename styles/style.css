@@ -241,6 +241,11 @@ html {
     display: none;
 }
 
+.burger-ico {
+    width: 20px;
+    height: 20px;
+}
+
 /*main section*/
 
 .main {
@@ -379,6 +384,65 @@ html {
     }
 }
 
+@media(max-width: 760px) {
+    .main-image {
+        max-height: 260px;
+        width: auto;
+        height: 100%;
+        place-self: center;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+@media(max-width: 320px) {
+    .header {
+        width: 100%;
+        max-width: 278px;
+        margin: 15px 0px;
+    }
+
+    .burger-ico {
+        width: 30px;
+        height: 30px;
+        margin: -6px -1px 0px 0px;
+    }
+
+    .main-title {
+        font-family: 'Georgia';
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+        font-size: 25px;
+        max-width: 200px;
+        text-align: center;
+    }
+
+    .main-block {
+        gap: 27px;
+        max-width: 293px;
+        margin-top: -30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-text {
+        text-align: center;
+    }
+
+    .main-image {
+        max-height: 275px;
+        margin-right: -40px;
+    }
+}
+
 /*about section*/
 
 .about {
@@ -443,6 +507,44 @@ html {
     .about-wrapper {
         flex-direction: column-reverse;
         gap: 70px;
+    }
+}
+
+@media(max-width: 320px) {
+    .about-wrapper {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .about-title {
+        font-size: 25px;
+        max-width: 400px;
+        margin: 11px 0px 10px 1px;
+        text-align: center;
+    }
+
+    .about-block {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 270px;
+        align-items: center;
+    }
+
+    .about {
+        padding: 31px 0px 43px 0px;
+    }
+
+    .about-text {
+        margin-bottom: 6px;
+        text-align: justify;
+    }
+
+    .about-img {
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+        margin: 4px 0px 0px 0px;
     }
 }
 
@@ -561,6 +663,95 @@ html {
     }
 }
 
+@media(max-width: 760px) {
+    .slider-main_block {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 40px;
+        align-content: center;
+        max-width: -1px;
+        width: 270px;
+        overflow: hidden;
+    }
+}
+
+@media(max-width: 500px) {
+    .pets-title {
+        margin-bottom: 10px;
+    }
+
+    .pets-wrapper {
+        gap: 70px;
+    }
+
+    .pets-slider {
+        overflow: visible;
+    }
+
+    .btn-slider_control {
+        margin-bottom: -460px;
+    }
+
+    .left {
+        position: absolute;
+        left: 68px;
+        top: 78%;
+    }
+
+    .right {
+        position: absolute;
+        right: 68px;
+        top: 78%;
+    }
+
+    .slider-main_block {
+        transform: translateX(20%);
+    }
+
+    .btn-pets {
+        margin: 50px 0px 48px 0px;
+    }
+}
+
+@media(max-width: 360px) {
+    .slider-main_block {
+        transform: translateX(10%);
+    }
+}
+
+@media(max-width: 320px) {
+    .pets-title {
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+
+    .pets {
+        padding: 21px 0px 2px 0px;
+    }
+
+    .pets-wrapper {
+        gap: 31px;
+    }
+
+    .slider-main_block {
+        transform: translateX(9%);
+    }
+
+    .btn-pets {
+        margin: 83px 0px 40px 0px;
+    }
+
+    .right {
+        top: 75.5%;
+    }
+
+    .left {
+        top: 75.5%;
+    }
+}
+
 /*help section*/
 
 .help {
@@ -641,7 +832,6 @@ html {
         /* gap: 120px; */
         row-gap: 55px;
         column-gap: 60px;
-        width: 675px;
         margin: 0px 0px;
     }
 
@@ -651,6 +841,18 @@ html {
         justify-content: center;
         flex-direction: column;
         width: 170px;
+    }
+}
+
+@media(max-width: 320px) {
+    .help-title {
+        font-size: 25px;
+        max-width: 270px;
+        margin-top: 0px;
+    }
+
+    .help {
+        padding: 42px 0px 100px 0px;
     }
 }
 
@@ -775,6 +977,14 @@ html {
     }
 }
 
+@media(max-width: 520px) {
+    .donation-img {
+        height: 100%;
+        max-height: 135px;
+        margin-left: 18px;
+    }
+}
+
 /*footer section*/
 
 .footer {
@@ -869,5 +1079,19 @@ html {
 
     .footer-block_wrapper {
         gap: 38px;
+    }
+}
+
+@media(max-width: 520px) {
+    .footer-block_wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .donation-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 360px;
     }
 }
