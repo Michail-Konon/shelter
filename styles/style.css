@@ -262,6 +262,7 @@ html {
     margin: 54px 0px 0px 0px;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .main-block {
@@ -300,8 +301,82 @@ html {
 }
 
 .main-image {
-    /*max-height: 698px;*/
+    max-height: 729px;
     width: auto;
+    height: 100%;
+}
+
+@media(max-width: 1180px) {
+    .main-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 54px 0px 0px 0px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .main-image {
+        max-height: 569px;
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media(max-width: 768px) {
+    .header {
+        width: 100%;
+        max-width: 708px;
+        margin: 15px 0px;
+    }
+
+    .main-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 27px;
+        max-width: 465px;
+        margin-top: -30px;
+    }
+
+    .btn-main {
+        place-self: center;
+    }
+
+    .main-title {
+        margin: 1px 0px 0px 2px;
+    }
+
+    .main-text {
+        margin-left: 2px;
+        margin-top: 13px;
+    }
+
+    .main-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 54px 0px 0px 0px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 102px;
+    }
+
+    .main-image {
+        max-height: 591px;
+        width: auto;
+        height: 100%;
+        place-self: end;
+        margin-right: 33px;
+    }
+
+    .main {
+        background-image: url(/shelter/assets/img/main-bg768.png);
+    }
 }
 
 /*about section*/
@@ -359,6 +434,18 @@ html {
     height: auto;
     margin: 0px 0px 0px 0px;
 }
+
+@media(max-width: 768px) {
+    .about {
+        padding: 70px 0px 100px 0px;
+    }
+
+    .about-wrapper {
+        flex-direction: column-reverse;
+        gap: 70px;
+    }
+}
+
 
 /*pets section*/
 
@@ -449,6 +536,31 @@ html {
     color: #545454;    
 }
 
+@media(max-width: 768px) {
+    .pets-slider {
+        display: flex;
+        width: 100%;
+        max-width: 710px;
+        justify-content: space-between;
+        align-items: center;
+        max-height: 436px;
+        overflow: hidden;
+        gap: 0px;
+    }
+
+    .slider-main_block {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 40px;
+        align-content: center;
+        max-width: -1px;
+        width: 578px;
+        overflow: hidden;
+    }
+}
+
 /*help section*/
 
 .help {
@@ -518,6 +630,28 @@ html {
     text-align: center;
     letter-spacing: 0.06em;
     color: #545454;
+}
+
+@media(max-width: 768px) {
+    .help-icons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        /* gap: 120px; */
+        row-gap: 55px;
+        column-gap: 60px;
+        width: 675px;
+        margin: 0px 0px;
+    }
+
+    .icon_item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 170px;
+    }
 }
 
 /*donation section*/
@@ -622,6 +756,25 @@ html {
     letter-spacing: 0.06em;
 }
 
+@media(max-width: 768px) {
+    .donation {
+        padding: 64px 0px 99px 0px;
+    }
+
+    .donation-wrapper {
+        flex-direction: column-reverse;
+        gap: 48px;
+        margin-left: -20px;
+    }
+
+    .donation-img {
+        height: 100%;
+        max-height: 261px;
+        margin-left: 18px;
+        /* margin-right: 19px; */
+    }
+}
+
 /*footer section*/
 
 .footer {
@@ -702,4 +855,19 @@ html {
 
 .fix-three {
     margin-left: -2px;
+}
+
+@media(max-width: 768px) {
+    .footer {
+        background-image: url(/shelter/assets/img/footer-bg768.png);
+        padding: 14px 0px 0px 0px;
+    }
+
+    .footer-wrapper {
+        gap: 34px;
+    }
+
+    .footer-block_wrapper {
+        gap: 38px;
+    }
 }
