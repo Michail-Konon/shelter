@@ -1166,7 +1166,7 @@ html {
     }
 }
 
-@media(max-width: 520px) {
+@media(max-width: 320px) {
 
     .footer {
         padding: 21px 0px 0px 0px;
