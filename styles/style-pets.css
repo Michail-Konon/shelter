@@ -247,6 +247,14 @@ html {
     display: none;
 }
 
+@media (max-width: 768px) {
+    .header {
+        width: 100%;
+        max-width: 708px;
+        margin: 31px auto 25px auto;
+    }
+}
+
 /*pets section*/
 
 .pets {
@@ -354,6 +362,30 @@ html {
     color: #545454;    
 }
 
+@media (max-width: 768px) {
+    .pets-title {
+        margin-bottom: 17px;
+    }
+
+    .pets-slider {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        justify-content: center;
+        align-items: flex-start;
+        max-height: 1370px;
+        overflow: hidden;
+    }
+
+    .slider_controls {
+        margin: 25px 30px 24px 30px;
+        display: flex;
+        gap: 18px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 /*footer section*/
 
 .footer {
@@ -434,4 +466,19 @@ html {
 
 .fix-three {
     margin-left: -2px;
+}
+
+@media(max-width: 768px) {
+    .footer {
+        background-image: url(/shelter/assets/img/footer-bg768.png);
+        padding: 14px 0px 0px 0px;
+    }
+
+    .footer-wrapper {
+        gap: 34px;
+    }
+
+    .footer-block_wrapper {
+        gap: 38px;
+    }
 }
