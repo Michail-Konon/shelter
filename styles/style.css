@@ -849,10 +849,33 @@ html {
         font-size: 25px;
         max-width: 270px;
         margin-top: 0px;
+        margin-bottom: 31px;
     }
 
     .help {
-        padding: 42px 0px 100px 0px;
+        padding: 42px 0px 43px 0px;
+    }
+
+    .icon-tip {
+        font-size: 15px;
+        line-height: 110%;  
+        margin: 21px 0px 0px 0px;
+    }
+
+    .icon-ico {
+        width: 50px;
+        height: 50px;
+    }  
+    
+    .icon_item {
+        width: 125px;
+    }
+
+    .help-icons {
+        row-gap: 29px;
+        column-gap: 36px;
+        margin: 0px 0px 0px 17px;
+        justify-content: flex-start;
     }
 }
 
@@ -985,6 +1008,53 @@ html {
     }
 }
 
+@media(max-width: 320px) {
+    .block-title {
+        font-size: 25px;
+        line-height: 130%;
+        max-width: 220px;
+        margin-bottom: 4px;
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    .donation {
+        padding: 42px 0px 41px 0px;
+    }
+
+    .donation-wrapper {
+        flex-direction: column-reverse;
+        gap: 31px;
+        margin-left: 0px;
+    }
+
+    .block-text {
+        letter-spacing: 0.0em;
+        margin-top: 19px;
+    }
+
+    .card-numbers {
+        font-size: 15px;
+        line-height: 110%;
+    }
+
+    .donation-card {
+        margin-top: 9px;
+    }
+
+    .block-subtext {
+        width: 280px;
+        margin-top: 20px;
+        text-align: justify;
+    }
+
+    .donation-img {
+        height: 100%;
+        max-height: 135px;
+        margin-left: 0px;
+    }
+}
+
 /*footer section*/
 
 .footer {
@@ -1093,5 +1163,59 @@ html {
         flex-direction: column;
         align-items: center;
         max-width: 360px;
+    }
+}
+
+@media(max-width: 520px) {
+
+    .footer {
+        padding: 21px 0px 0px 0px;
+        background-image: url(/shelter/assets/img/footer-bg320.png);
+    }
+
+    .footer-title {
+        font-size: 25px;
+        margin-top: 10px;
+        line-height: 127%;
+        margin-bottom: 30px;
+        width: 290px;
+    }
+
+    .footer-info_block {
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .fix-two {
+        margin-left: 0px;
+        margin-top: -4px;
+        margin-bottom: 18px;
+    }
+
+    .footer-block_wrapper {
+        gap: 0px;
+    }
+
+    .fix-three {
+        margin-left: -30px;
+        margin-top: 1px;
+    }
+
+    .fix-four {
+        margin-left: 1px;
+        margin-top: 15px;
+    }
+
+    .footer-wrapper {
+        gap: 0px;
+    }
+
+    .footer-img {
+        width: 260px;
+        margin-top: 10px;
     }
 }
