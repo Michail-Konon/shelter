@@ -377,7 +377,6 @@ html {
 .slider-card:hover {
     transition: 0.2s;
     transform: scale(1.05);
-    box-shadow: 0px 2px 3px 3px rgb(125, 124, 124);
 }
 
 .card-img {
