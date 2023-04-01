@@ -28,6 +28,10 @@ html {
     margin: 0 auto;
 }
 
+.body.unscroll {
+    overflow: hidden;
+}
+
 .section-wrapper {
     display: flex;
     flex-direction: column;
@@ -125,6 +129,31 @@ html {
     color: #000000;
     transition: 0.2s;
     transform:scale(1.1)
+}
+
+/*logo*/
+
+.lines {
+    display: none;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.2s;
+    gap: 9px;
+    z-index: 9;
+}
+
+.lines.action {
+    transform: rotateZ(90deg);
+    transition: 0.2s;
+}
+
+.line {
+    height: 2px;
+    background-color: wheat;
+    width: 100%;
 }
 
 /*Header*/
@@ -237,13 +266,53 @@ html {
     transition: 0.2s;
 }
 
-.burger {
+.overlay {
     display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(41, 41, 41, .6);
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.2s;
 }
 
-.burger-ico {
-    width: 20px;
-    height: 20px;
+.navigation-small {
+    position: absolute;
+    z-index: 8;
+    right: -400px;
+    width: 320px;
+    background: #292929;
+    height: 30%;
+    top: 0;
+    transition: 0.2s;
+}
+
+.nav-list-small {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 52%;
+    gap: 30px;
+}
+
+.nav-small {
+    font-size: 32px;
+    line-height: 160%;
+}
+
+.show {
+    display: block;
+    transition: 0.5s;
+}
+
+.show-menu {
+    transition: 0.2s;
+    right: 0px;
 }
 
 /*main section*/
@@ -384,7 +453,15 @@ html {
     }
 }
 
-@media(max-width: 760px) {
+@media(max-width: 767px) {
+    .section-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
     .main-image {
         max-height: 260px;
         width: auto;
@@ -396,7 +473,7 @@ html {
         display: none;
     }
 
-    .burger {
+    .lines {
         display: flex;
     }
 }
@@ -406,12 +483,6 @@ html {
         width: 100%;
         max-width: 278px;
         margin: 15px 0px;
-    }
-
-    .burger-ico {
-        width: 30px;
-        height: 30px;
-        margin: -6px -1px 0px 0px;
     }
 
     .main-title {
