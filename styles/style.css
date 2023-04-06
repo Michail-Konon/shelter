@@ -281,6 +281,19 @@ html {
     transition: 0.2s;
 }
 
+.card-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(41, 41, 41, .6);
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.2s;
+}
+
 .navigation-small {
     position: absolute;
     z-index: 8;
