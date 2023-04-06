@@ -682,9 +682,11 @@ html {
 .slider-main_block {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
     gap: 90px;
+    width: 990px;
+    overflow: hidden;
 }
 
 /*slider cards*/
@@ -721,6 +723,18 @@ html {
     letter-spacing: 0.06em;
     margin: 31px 0px 30px 1px;
     color: #545454;    
+}
+
+@media(max-width: 1200px) {
+    .slider-main_block {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 40px;
+        width: 578px;
+        overflow: hidden;
+    }
 }
 
 @media(max-width: 768px) {
@@ -1302,5 +1316,42 @@ html {
     .footer-img {
         width: 260px;
         margin-top: 10px;
+    }
+}
+
+/*Special items*/
+.hide-first {
+    margin-left: -360px;
+    transition: 0.2s;
+}
+
+@media(max-width: 1200px) {
+    .hide-first {
+        margin-left: -310px;
+        transition: 0.2s;
+    }
+}
+
+@media(max-width: 768px) {
+    .hide-first {
+        margin-left: -310px;
+        transition: 0.2s;
+    }
+}
+
+.hide-last {
+    margin-left: -360px;
+}
+
+@media(max-width: 1200px) {
+    .hide-last {
+        margin-left: -310px;
+    }
+}
+
+@media(max-width: 768px) {
+    .hide-last {
+        margin-left: -310px;
+        transition: 1.2s;
     }
 }
