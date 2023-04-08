@@ -684,7 +684,7 @@ html {
     align-items: center;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    gap: 90px;
+    gap: 0px;
     width: 990px;
     overflow: hidden;
 }
@@ -731,7 +731,7 @@ html {
         align-items: center;
         justify-content: flex-start;
         flex-wrap: nowrap;
-        gap: 40px;
+        gap: 0px;
         width: 578px;
         overflow: hidden;
     }
@@ -754,7 +754,7 @@ html {
         align-items: center;
         justify-content: flex-start;
         flex-wrap: nowrap;
-        gap: 40px;
+        gap: 0px;
         align-content: center;
         max-width: -1px;
         width: 578px;
@@ -768,7 +768,7 @@ html {
         align-items: center;
         justify-content: flex-start;
         flex-wrap: nowrap;
-        gap: 40px;
+        gap: 0px;
         align-content: center;
         max-width: -1px;
         width: 270px;
@@ -1320,36 +1320,48 @@ html {
 }
 
 /*Special items*/
-.hide-first {
-    margin-left: -360px;
+
+.cards-shell {
     transition: 0.2s;
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
 }
 
-@media(max-width: 1200px) {
-    .hide-first {
-        margin-left: -310px;
-        transition: 0.2s;
-    }
-}
-
-@media(max-width: 768px) {
-    .hide-first {
-        margin-left: -310px;
-        transition: 0.2s;
-    }
+.hide-first {
+    margin-left: -900px;
+    transition: 0.1s;
 }
 
 .hide-last {
     margin-left: -360px;
 }
 
+
 @media(max-width: 1200px) {
+    .hide-first {
+        margin-left: -310px;
+        transition: 0.2s;
+    }
+
     .hide-last {
         margin-left: -310px;
+    }
+
+    .cards-shell {
+        transition: 0.2s;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
     }
 }
 
 @media(max-width: 768px) {
+    .hide-first {
+        margin-left: -310px;
+        transition: 0.2s;
+    }
+
     .hide-last {
         margin-left: -310px;
         transition: 1.2s;
