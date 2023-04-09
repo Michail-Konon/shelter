@@ -113,10 +113,17 @@ function firstGeneration(arr = baseArr) {
         div.classList.add('slider-card');
         div.addEventListener('click', () => {
             let popupContent = document.createElement('div');
+                popupContent.classList.add('popup-block');
+            let popupClose = document.createElement('div');
+                popupClose.addEventListener('click', () => {
+                closePopup();
+            })
+            popupClose.classList.add('popup-close');
+            popupContent.addEventListener('click', (e)=> {
+                e.stopPropagation();
+            })
             popupContent.innerHTML = 
-            `<div class="popup-block">
-            <div class="popup-close"></div>
-                <img src="${CARDS[el].img}" alt="${CARDS[el].name}" class="popup-img">
+            `<img src="${CARDS[el].img}" alt="${CARDS[el].name}" class="popup-img">
             <div class="popup-content">
                 <h4 class="popup-title">${CARDS[el].name}</h4>
                 <p class="popup-subtitle">${CARDS[el].type} - ${CARDS[el].breed}</p>
@@ -127,9 +134,9 @@ function firstGeneration(arr = baseArr) {
                     <li class="popup-item"><span>Diseases:</span> ${CARDS[el].diseases}</li>
                     <li class="popup-item"><span>Parasites:</span> ${CARDS[el].parasites}</li>
                 </ul>
-            </div>
-          </div>`
-          closePopup();
+            </div>`
+          openPopup();
+          popupContent.appendChild(popupClose);
           cardOverlay.appendChild(popupContent);
         });
         div.innerHTML = `
@@ -146,10 +153,17 @@ function leftGeneration(arr = nextArr) {
         div.classList.add('slider-card');
         div.addEventListener('click', () => {
             let popupContent = document.createElement('div');
+                popupContent.classList.add('popup-block');
+            let popupClose = document.createElement('div');
+                popupClose.addEventListener('click', () => {
+                closePopup();
+            })
+            popupClose.classList.add('popup-close');
+            popupContent.addEventListener('click', (e)=> {
+                e.stopPropagation();
+            })
             popupContent.innerHTML = 
-            `<div class="popup-block">
-            <div class="popup-close"></div>
-                <img src="${CARDS[el].img}" alt="${CARDS[el].name}" class="popup-img">
+            `<img src="${CARDS[el].img}" alt="${CARDS[el].name}" class="popup-img">
             <div class="popup-content">
                 <h4 class="popup-title">${CARDS[el].name}</h4>
                 <p class="popup-subtitle">${CARDS[el].type} - ${CARDS[el].breed}</p>
@@ -160,9 +174,9 @@ function leftGeneration(arr = nextArr) {
                     <li class="popup-item"><span>Diseases:</span> ${CARDS[el].diseases}</li>
                     <li class="popup-item"><span>Parasites:</span> ${CARDS[el].parasites}</li>
                 </ul>
-            </div>
-          </div>`
-          closePopup();
+            </div>`
+          openPopup();
+          popupContent.appendChild(popupClose);
           cardOverlay.appendChild(popupContent);
         });
         div.innerHTML = `
@@ -180,10 +194,17 @@ function rightGeneration(arr = nextArr) {
         div.classList.add('slider-card');
         div.addEventListener('click', () => {
             let popupContent = document.createElement('div');
+                popupContent.classList.add('popup-block');
+            let popupClose = document.createElement('div');
+                popupClose.addEventListener('click', () => {
+                closePopup();
+            })
+            popupClose.classList.add('popup-close');
+            popupContent.addEventListener('click', (e)=> {
+                e.stopPropagation();
+            })
             popupContent.innerHTML = 
-            `<div class="popup-block">
-            <div class="popup-close"></div>
-                <img src="${CARDS[el].img}" alt="${CARDS[el].name}" class="popup-img">
+            `<img src="${CARDS[el].img}" alt="${CARDS[el].name}" class="popup-img">
             <div class="popup-content">
                 <h4 class="popup-title">${CARDS[el].name}</h4>
                 <p class="popup-subtitle">${CARDS[el].type} - ${CARDS[el].breed}</p>
@@ -194,9 +215,9 @@ function rightGeneration(arr = nextArr) {
                     <li class="popup-item"><span>Diseases:</span> ${CARDS[el].diseases}</li>
                     <li class="popup-item"><span>Parasites:</span> ${CARDS[el].parasites}</li>
                 </ul>
-            </div>
-          </div>`
-          closePopup();
+            </div>`
+          openPopup();
+          popupContent.appendChild(popupClose);
           cardOverlay.appendChild(popupContent);
         });
         div.innerHTML = `
@@ -340,6 +361,12 @@ function closePopup() {
     cardOverlay.classList.toggle('show');
     targetBody.classList.toggle('unscroll');
     cardOverlay.innerHTML = '';
+}
+
+function openPopup() {
+    cardOverlay.innerHTML = '';
+    cardOverlay.classList.add('show');
+    targetBody.classList.toggle('unscroll');
 }
 
 function popupMsg () {

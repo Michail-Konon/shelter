@@ -1351,6 +1351,7 @@ html {
     padding-right: 20px;
     font-family: Georgia;
     cursor: auto;
+    z-index: 3;
 }
   
 .popup-close {
@@ -1386,11 +1387,13 @@ html {
     font-size: 35px;
     line-height: 130%;
     font-weight: 400;
+    margin: 0;
 }
 
 .popup-subtitle {
     font-size: 20px;
     line-height: 115%;
+    margin: 0;
 }
   
 .popup-description {
@@ -1441,6 +1444,12 @@ html {
         flex-direction: row;
         gap: 40px;
     }
+
+    .popup-description {
+        font-size: 15px;
+        line-height: 110%;
+        margin: 20px 0;
+    }
 }
 
 @media(max-width: 768px) {
@@ -1452,5 +1461,40 @@ html {
     .hide-last {
         margin-left: -310px;
         transition: 1.2s;
+    }
+}
+
+@media (max-width: 760px) {
+    .popup-block {
+      width: 240px;
+      min-height: 341px;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .popup-img {
+      display: none;
+    }
+  
+    .popup-content {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .popup-description {
+      text-align: justify;
+    }
+  
+    .popup-close {
+      top: -52px;
+      right: -30px;
+    }
+  
+    .popup-title {
+      text-align: center;
+    }
+  
+    .popup-subtitle {
+      text-align: center;
     }
 }
