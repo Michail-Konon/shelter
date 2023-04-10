@@ -6,143 +6,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style-pets.css">
     <link rel="icon" type="image/x-icon" href="/shelter/assets/ico/favicon.svg">
-    <script src="../script/script-pets.js"></script>
+    <script defer type="module" src="/shelter/pets.js"></script>
+    <script defer type="module" src="../script/script-pets.js"></script>
     <title>Pets</title>
 </head>
 <body class="body">
-    <header class="header">
-        <div class="header-wrapper">
-            <div class="header-logo" onclick="location.href='/shelter/index.html';">
-                <p class="logo-title">Cozy House</p>
-                <p class="logo-text">Shelter for pets in Boston</p>
+    <div class="body-wrapper">
+        <header class="header">
+            <div class="header-wrapper">
+                <div class="header-logo" onclick="location.href='/shelter/index.html';">
+                    <p class="logo-title">Cozy House</p>
+                    <p class="logo-text">Shelter for pets in Boston</p>
+                </div>
+    
+                <nav class="navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/shelter/index.html" target="_blank">About the shelter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active">Our pets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/shelter/index.html#help">Help the shelter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <nav class="navigation-small">
+                    <ul class="nav-list-small">
+                        <li class="nav-item">
+                            <a class="nav-link nav-small" href="/shelter/index.html" target="_blank">About the shelter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-small active">Our pets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-small" href="/shelter/index.html#help">Help the shelter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-small" href="#footer">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <div class="overlay" data-close="true"></div>
+    
+                <div class="lines">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
             </div>
-
-            <nav class="navigation">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/shelter/index.html" target="_blank">About the shelter</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active">Our pets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/shelter/index.html#help">Help the shelter</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#footer">Contacts</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="burger">
-                <img class="burger-ico" src="/shelter/assets/ico/burger.svg" alt="burger">
-            </div>
-        </div>
-    </header>
-
-    <main class="section-wrapper">
-        <section id="pets" class="pets">
-            <div class="pets-wrapper">
-                <h1 class="pets-title">
-                    Our friends who<br>are looking for a house
-                </h1>
-                <div class="pets-slider">
-                    <div class="slider-main_block">
-                        <div class="slider-card">
-                            <img class="card-img" src="/shelter/assets/img/card-katrine.png" alt="cat">
-                            <p class="card-title">Katrine</p>
-                            <button class="btn-card btn">Learn more</button>
-                        </div>
-
-                        <div class="slider-card">
-                            <img class="card-img" src="/shelter/assets/img/card-jennifer.png" alt="doggy">
-                            <p class="card-title">Jennifer</p>
-                            <button class="btn-card btn">Learn more</button>
-                        </div>
-
-                        <div class="slider-card">
-                            <img class="card-img" src="/shelter/assets/img/card-woody.png" alt="dog">
-                            <p class="card-title">Woody</p>
-                            <button class="btn-card btn">Learn more</button>
-                        </div>
-
-                        <div class="slider-card">
-                            <img class="card-img" src="/shelter/assets/img/card-sophia.png" alt="puppy">
-                            <p class="card-title">Sophia</p>
-                            <button class="btn-card btn">Learn more</button>
-                        </div>
-
-                        <div class="slider-card">
-                            <img class="card-img" src="/shelter/assets/img/card-timmy.png" alt="doggy">
-                            <p class="card-title">Timmy</p>
-                            <button class="btn-card btn">Learn more</button>
-                        </div>
-
-                        <div class="slider-card">
-                            <img class="card-img" src="/shelter/assets/img/card-charly.png" alt="dog">
-                            <p class="card-title">Charly</p>
-                            <button class="btn-card btn">Learn more</button>
-                        </div>
-
-                        <div class="slider-card">
-                            <img class="card-img" src="/shelter/assets/img/card-scarlet.png" alt="dog">
-                            <p class="card-title">Scarlett</p>
-                            <button class="btn-card btn">Learn more</button>
-                        </div>
-
-                        <div class="slider-card">
-                            <img class="card-img" src="/shelter/assets/img/card-freddie.png" alt="dog">
-                            <p class="card-title">Freddie</p>
-                            <button class="btn-card btn">Learn more</button>
+        </header>
+    
+        <main class="section-wrapper">
+            <section id="pets" class="pets">
+                <div class="pets-wrapper">
+                    <h1 class="pets-title">
+                        Our friends who<br>are looking for a house
+                    </h1>
+                    <div class="pets-slider">
+                        <div class="slider-main_block">
+                            
                         </div>
                     </div>
+                    <div class="slider_controls">
+                        <button disabled class="btn-first btn-slider_control-long"> &lt;&lt; </button>
+                        <button disabled class="btn-prev btn-slider_control">&lt;</button>
+                        <div class="control-counter">1</div>
+                        <button class="btn-next btn-slider_control">></button>
+                        <button class="btn-last btn-slider_control-long">>></button>
+                    </div>
                 </div>
-                <div class="slider_controls">
-                    <button class="btn-slider_control-long disable"> &lt;&lt; </button>
-                    <button class="btn-slider_control disable">&lt;</button>
-                    <div class="control-counter">1</div>
-                    <button class="btn-slider_control">></button>
-                    <button class="btn-slider_control-long">>></button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer id="footer" class="footer">
-        <div class="footer-wrapper">
-            <div class="footer-block_wrapper">
-                <div class="footer-info_block">
+            </section>
+        </main>
+    
+        <footer id="footer" class="footer">
+            <div class="footer-wrapper">
+                <div class="footer-block_wrapper">
                     <div class="footer-info_block">
-                        <h2 class="footer-title">For questions and suggestions</h2>
-                        <div class="footer-block_item" onclick="location.href='mailto:email@example.com';">
-                            <img class="footer-ico" src="/shelter/assets/ico/footer-icon-email.svg" alt="mail">
-                            <div class="footer-subtext">email@shelter.com</div>
+                        <div class="footer-info_block">
+                            <h2 class="footer-title">For questions and suggestions</h2>
+                            <div class="footer-block_item" onclick="location.href='mailto:email@example.com';">
+                                <img class="footer-ico" src="/shelter/assets/ico/footer-icon-email.svg" alt="mail">
+                                <div class="footer-subtext">email@shelter.com</div>
+                            </div>
+                            <div class="footer-block_item" onclick="location.href='tel:+13 674 567 75 54';">
+                                <img class="footer-ico" src="/shelter/assets/ico/footer-icon-phone.svg" alt="">
+                                <div class="footer-subtext">+13 674 567 75 54</div>
+                            </div>
                         </div>
-                        <div class="footer-block_item" onclick="location.href='tel:+13 674 567 75 54';">
-                            <img class="footer-ico" src="/shelter/assets/ico/footer-icon-phone.svg" alt="">
-                            <div class="footer-subtext">+13 674 567 75 54</div>
+                    </div>
+        
+                    <div class="footer-info_block">
+                        <div class="footer-info_block">
+                            <h2 class="footer-title fix-one">We are waiting for your visit</h2>
+                            <div class="footer-block_item fix-two" onclick="window.open('https://www.google.com/maps/@15.3552351,39.9450854,8.82z')">
+                                <img class="footer-ico" src="/shelter/assets/ico/footer-icon-marker.svg" alt="pin">
+                                <div class="footer-subtext fix-four">1 Central Street, Boston (entrance from the store)</div>
+                            </div>
+                            <div class="footer-block_item fix-three" onclick="window.open('https://www.google.com/maps/@21.3454795,-79.1953847,7.46z')">
+                                <img class="footer-ico" src="/shelter/assets/ico/footer-icon-marker.svg" alt="pin">
+                                <div class="footer-subtext">18 South Park, London</div>
+                            </div>
                         </div>
                     </div>
                 </div>
     
-                <div class="footer-info_block">
-                    <div class="footer-info_block">
-                        <h2 class="footer-title fix-one">We are waiting for your visit</h2>
-                        <div class="footer-block_item fix-two" onclick="window.open('https://www.google.com/maps/@15.3552351,39.9450854,8.82z')">
-                            <img class="footer-ico" src="/shelter/assets/ico/footer-icon-marker.svg" alt="pin">
-                            <div class="footer-subtext fix-four">1 Central Street, Boston (entrance from the store)</div>
-                        </div>
-                        <div class="footer-block_item fix-three" onclick="window.open('https://www.google.com/maps/@21.3454795,-79.1953847,7.46z')">
-                            <img class="footer-ico" src="/shelter/assets/ico/footer-icon-marker.svg" alt="pin">
-                            <div class="footer-subtext">18 South Park, London</div>
-                        </div>
-                    </div>
-                </div>
+                <img class="footer-img" src="/shelter/assets/img/footer-puppy.png" alt="doggy">
             </div>
-
-            <img class="footer-img" src="/shelter/assets/img/footer-puppy.png" alt="doggy">
-        </div>
-    </footer>
+        </footer>
+    </div>
+    <div class="card-overlay" data-close="true"> 
 </body>
 
 </html>

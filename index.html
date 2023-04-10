@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="icon" type="image/x-icon" href="/shelter/assets/ico/favicon.svg">
     <title>Shelter</title>
-    <script src="./script/script.js"></script>
+    <script defer type="module" src="./pets.js"></script>
+    <script defer type="module" src="./script/script.js"></script>
 </head>
 <body class="body">
     <main class="section-wrapper">
@@ -35,9 +36,30 @@
                             </li>
                         </ul>
                     </nav>
-        
-                    <div class="burger">
-                        <img class="burger-ico" src="/shelter/assets/ico/burger.svg" alt="burger">
+
+                    <nav class="navigation-small">
+                        <ul class="nav-list-small">
+                            <li class="nav-item">
+                                <a class="nav-link active nav-small">About the shelter</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-small" href="/shelter/pages/pets.html" target="_blank">Our pets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-small" href="#help">Help the shelter</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-small" href="#footer">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="overlay" data-close="true"></div>
+
+                    <div class="lines">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
                     </div>
                 </div>
             </header>
@@ -86,22 +108,16 @@
                 <div class="pets-slider">
                     <button class="btn-slider_control btn left">←</button>
                     <div class="slider-main_block">
-                        <div class="slider-card">
-                            <img class="card-img" src="/shelter/assets/img/card-katrine.png" alt="cat">
-                            <p class="card-title">Katrine</p>
-                            <button class="btn-card btn">Learn more</button>
+                        <div class="cards-shell">
+                            
                         </div>
 
-                        <div class="slider-card">
-                            <img class="card-img" src="/shelter/assets/img/card-jennifer.png" alt="doggy">
-                            <p class="card-title">Jennifer</p>
-                            <button class="btn-card btn">Learn more</button>
+                        <div class="cards-shell">
+                            
                         </div>
 
-                        <div class="slider-card">
-                            <img class="card-img" src="/shelter/assets/img/card-woody.png" alt="dog">
-                            <p class="card-title">Woody</p>
-                            <button class="btn-card btn">Learn more</button>
+                        <div class="cards-shell">
+                            
                         </div>
                     </div>
                     <button class="btn-slider_control btn right">→</button>
@@ -220,5 +236,7 @@
             <img class="footer-img" src="/shelter/assets/img/footer-puppy.png" alt="doggy">
         </div>
     </footer>
+    <div class="card-overlay" data-close="true">                 
+    </div>
 </body>
 </html>
