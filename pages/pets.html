@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style-pets.css">
     <link rel="icon" type="image/x-icon" href="/shelter/assets/ico/favicon.svg">
-    <script defer src="../script/script-pets.js"></script>
+    <script defer type="module" src="/shelter/pets.js"></script>
+    <script defer type="module" src="../script/script-pets.js"></script>
     <title>Pets</title>
 </head>
 <body class="body">
@@ -70,61 +71,15 @@
                     </h1>
                     <div class="pets-slider">
                         <div class="slider-main_block">
-                            <div class="slider-card">
-                                <img class="card-img" src="/shelter/assets/img/card-katrine.png" alt="cat">
-                                <p class="card-title">Katrine</p>
-                                <button class="btn-card btn">Learn more</button>
-                            </div>
-    
-                            <div class="slider-card">
-                                <img class="card-img" src="/shelter/assets/img/card-jennifer.png" alt="doggy">
-                                <p class="card-title">Jennifer</p>
-                                <button class="btn-card btn">Learn more</button>
-                            </div>
-    
-                            <div class="slider-card">
-                                <img class="card-img" src="/shelter/assets/img/card-woody.png" alt="dog">
-                                <p class="card-title">Woody</p>
-                                <button class="btn-card btn">Learn more</button>
-                            </div>
-    
-                            <div class="slider-card">
-                                <img class="card-img" src="/shelter/assets/img/card-sophia.png" alt="puppy">
-                                <p class="card-title">Sophia</p>
-                                <button class="btn-card btn">Learn more</button>
-                            </div>
-    
-                            <div class="slider-card">
-                                <img class="card-img" src="/shelter/assets/img/card-timmy.png" alt="doggy">
-                                <p class="card-title">Timmy</p>
-                                <button class="btn-card btn">Learn more</button>
-                            </div>
-    
-                            <div class="slider-card">
-                                <img class="card-img" src="/shelter/assets/img/card-charly.png" alt="dog">
-                                <p class="card-title">Charly</p>
-                                <button class="btn-card btn">Learn more</button>
-                            </div>
-    
-                            <div class="slider-card">
-                                <img class="card-img" src="/shelter/assets/img/card-scarlet.png" alt="dog">
-                                <p class="card-title">Scarlett</p>
-                                <button class="btn-card btn">Learn more</button>
-                            </div>
-    
-                            <div class="slider-card">
-                                <img class="card-img" src="/shelter/assets/img/card-freddie.png" alt="dog">
-                                <p class="card-title">Freddie</p>
-                                <button class="btn-card btn">Learn more</button>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="slider_controls">
-                        <button class="btn-slider_control-long disable"> &lt;&lt; </button>
-                        <button class="btn-slider_control disable">&lt;</button>
+                        <button class="btn-first btn-slider_control-long disable"> &lt;&lt; </button>
+                        <button class="btn-prev btn-slider_control disable">&lt;</button>
                         <div class="control-counter">1</div>
-                        <button class="btn-slider_control">></button>
-                        <button class="btn-slider_control-long">>></button>
+                        <button class="btn-next btn-slider_control">></button>
+                        <button class="btn-last btn-slider_control-long">>></button>
                     </div>
                 </div>
             </section>
@@ -166,6 +121,7 @@
             </div>
         </footer>
     </div>
+    <div class="card-overlay" data-close="true"> 
 </body>
 
 </html>
