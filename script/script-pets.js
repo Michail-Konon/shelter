@@ -41,6 +41,11 @@ window.addEventListener("load", (event) => {
     console.log("first generation complete");
 });
 
+window.addEventListener("resize", (event) => {
+   currentPage = 1;
+   firstPage();
+});
+
 /*Unique arrray generation START*/
 
 let completeArray = [];
@@ -140,3 +145,97 @@ function popupMsg () {
 }
 
 /*Popup END*/
+
+/*Slider START*/
+
+let currentPage = 1;
+
+pageFirst.addEventListener('click', () => {
+
+});
+
+pagePrev.addEventListener('click', () => {
+    prevPage();
+});
+
+pageNext.addEventListener('click', () => {
+    nextPage();
+});
+
+pageLast.addEventListener('click', () => {
+    lastPage();
+});
+
+pageFirst.addEventListener('click', () => {
+    firstPage();
+});
+
+function totalPages() {
+    if (window.innerWidth >= 1220 ) {
+        return 6
+    } else if (window.innerWidth >= 580 ) {
+        return 8;
+    } else {
+        return 16;
+    }
+}
+
+function animationMargin() {
+    if(totalPages() == 6) {
+        return 929
+    } else {
+        return 1395
+    }
+}
+
+function nextPage() {
+    if(currentPage < totalPages()) {
+        sliderBlock.style.marginTop = `-${(currentPage * animationMargin())}px`
+        currentPage += 1;
+        pageCounter.innerHTML = currentPage;
+        pagePrev.removeAttribute('disabled');
+        pageFirst.removeAttribute('disabled');
+        if(currentPage == totalPages()) {
+            pageNext.setAttribute('disabled', 'true');
+            pageLast.setAttribute('disabled', 'true');
+        }
+    }
+}
+
+function prevPage() {
+    if(currentPage > 1) {
+        sliderBlock.style.marginTop = `-${((currentPage - 2) * animationMargin())}px`
+        currentPage -= 1;
+        pageCounter.innerHTML = currentPage;
+        pageNext.removeAttribute('disabled');
+        pageLast.removeAttribute('disabled');
+        if(currentPage == 1) {
+            sliderBlock.style.marginTop = `0px`
+            pagePrev.setAttribute('disabled', 'true');
+            pageFirst.setAttribute('disabled', 'true');
+        }
+    } 
+}
+
+function firstPage() {
+    currentPage = 1;
+    pageCounter.innerHTML = currentPage;
+    sliderBlock.style.marginTop = `0px`
+    pagePrev.setAttribute('disabled', 'true');
+    pageFirst.setAttribute('disabled', 'true');
+    pageNext.removeAttribute('disabled');
+    pageLast.removeAttribute('disabled');
+}
+
+function lastPage() {
+    currentPage = totalPages();
+    pageCounter.innerHTML = currentPage;
+    sliderBlock.style.marginTop = `-${((currentPage - 1) * animationMargin())}px`;
+    pageNext.setAttribute('disabled', 'true');
+    pageLast.setAttribute('disabled', 'true');
+    pagePrev.removeAttribute('disabled');
+    pageFirst.removeAttribute('disabled');
+}
+
+
+/*Slider END*/
