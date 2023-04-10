@@ -330,6 +330,7 @@ html {
 .show-menu {
     transition: 0.2s;
     right: 0px;
+    display: flex;
 }
 
 /*main section*/

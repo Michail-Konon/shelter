@@ -12,6 +12,10 @@ const pagePrev = document.querySelector('.btn-prev');
 const pageNext = document.querySelector('.btn-next');
 const pageLast = document.querySelector('.btn-last');
 
+const cardOverlay = document.querySelector('.card-overlay');
+
+let currentPage = 1;
+
 burger.addEventListener('click', () => {
     close();
     
@@ -72,8 +76,6 @@ function uniqueFormation() {
 };
 
 uniqueFormation();
-console.log(completeArray);
-console.log(completeArray.flat());
 /*Unique arrray generation END*/
 
 /*card generation START*/
@@ -121,9 +123,7 @@ function cardGeneration(arr = completeArray) {
 
 /*card generation END*/
 
-/*Popup START*/ // Undone
-const cardOverlay = document.querySelector('.card-overlay');
-
+/*Popup START*/
 cardOverlay.addEventListener('click', () => {
     closePopup();
 });
@@ -140,18 +140,11 @@ function openPopup() {
     targetBody.classList.toggle('unscroll');
 }
 
-function popupMsg () {
-    
-}
-
 /*Popup END*/
 
 /*Slider START*/
-
-let currentPage = 1;
-
 pageFirst.addEventListener('click', () => {
-
+    firstPage();
 });
 
 pagePrev.addEventListener('click', () => {
@@ -166,9 +159,16 @@ pageLast.addEventListener('click', () => {
     lastPage();
 });
 
-pageFirst.addEventListener('click', () => {
-    firstPage();
-});
+function typeChange(stance, first, second) {
+    if(stance == 'remove') {
+        first.removeAttribute('disabled');
+        second.removeAttribute('disabled')
+    }
+    if(stance == 'set') {
+        first.setAttribute('disabled', 'true');
+        second.setAttribute('disabled', 'true');
+    }
+}
 
 function totalPages() {
     if (window.innerWidth >= 1220 ) {
@@ -193,11 +193,9 @@ function nextPage() {
         sliderBlock.style.marginTop = `-${(currentPage * animationMargin())}px`
         currentPage += 1;
         pageCounter.innerHTML = currentPage;
-        pagePrev.removeAttribute('disabled');
-        pageFirst.removeAttribute('disabled');
+        typeChange('remove', pagePrev, pageFirst);
         if(currentPage == totalPages()) {
-            pageNext.setAttribute('disabled', 'true');
-            pageLast.setAttribute('disabled', 'true');
+            typeChange('set', pageNext, pageLast);
         }
     }
 }
@@ -207,12 +205,10 @@ function prevPage() {
         sliderBlock.style.marginTop = `-${((currentPage - 2) * animationMargin())}px`
         currentPage -= 1;
         pageCounter.innerHTML = currentPage;
-        pageNext.removeAttribute('disabled');
-        pageLast.removeAttribute('disabled');
+        typeChange('remove', pageNext, pageLast);
         if(currentPage == 1) {
             sliderBlock.style.marginTop = `0px`
-            pagePrev.setAttribute('disabled', 'true');
-            pageFirst.setAttribute('disabled', 'true');
+            typeChange('set', pagePrev, pageFirst);
         }
     } 
 }
@@ -221,20 +217,16 @@ function firstPage() {
     currentPage = 1;
     pageCounter.innerHTML = currentPage;
     sliderBlock.style.marginTop = `0px`
-    pagePrev.setAttribute('disabled', 'true');
-    pageFirst.setAttribute('disabled', 'true');
-    pageNext.removeAttribute('disabled');
-    pageLast.removeAttribute('disabled');
+    typeChange('set', pagePrev, pageFirst);
+    typeChange('remove', pageNext, pageLast);
 }
 
 function lastPage() {
     currentPage = totalPages();
     pageCounter.innerHTML = currentPage;
     sliderBlock.style.marginTop = `-${((currentPage - 1) * animationMargin())}px`;
-    pageNext.setAttribute('disabled', 'true');
-    pageLast.setAttribute('disabled', 'true');
-    pagePrev.removeAttribute('disabled');
-    pageFirst.removeAttribute('disabled');
+    typeChange('set', pageNext, pageLast);
+    typeChange('remove', pagePrev, pageFirst);
 }
 
 
